@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GameOfThrones</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    <%= link_to 'Houses', houses_path%>
+    <% flash.each do |type, message| %>
+      <p class="flash <%= type %>"> <%=message%> </p>
+      <%end%>
+  <body>
+    <%= yield %>
+  </body>
+</html>

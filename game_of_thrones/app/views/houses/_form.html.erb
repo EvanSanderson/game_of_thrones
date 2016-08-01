@@ -1,0 +1,31 @@
+<%= form_for @house do |f| %>
+
+  <% if @house.errors.any? %>
+    <div id="error_explanation">
+      <h2> <%= pluralize(@house.errors.count, "error")%>
+        stopped the House from being added. </h2>
+        <% @house.errors.full_messages.each do |m| %>
+          <p> <%= m %></p>
+          <%end%>
+        <%end%>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :motto %>
+  <%= f.text_field :motto %>
+</p>
+
+<p>
+  <%= f.label :sigil_url %>
+  <%= f.text_field :sigil_url %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<%end%>
