@@ -5,7 +5,7 @@ class CharactersController < ApplicationController
     @character = @house.characters.build(character_params)
 
     if @character.save
-    redirect_to @house
+    redirect_to @house, notice: "Succesfully created a character!"
     else
     render 'houses'
     end
