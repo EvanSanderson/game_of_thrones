@@ -6,7 +6,7 @@
 <h3> Current House Members </h3>
 <% @house.characters.each do |char| %>
   <ul>
-    <li><%= char.name %>
+    <li><%= link_to char.name, house_character_path(char) %>
       <ul>
           <li>Weapon: <%= char.weapon %></li>
           <li><% if char.dead == false %>
@@ -17,6 +17,8 @@
             </li>
         </ul>
       </ul>
+      <%= link_to "Delete This Character", house_character_path(char), method: :delete %>
+      <%= link_to "Edit This Character", edit_house_character_path(char) %>
     <%end%>
   </div>
 <div class="addCharacter">
@@ -34,10 +36,10 @@
   </p>
 
   <p>
-  <%= radio_button_tag(:dead, true) %>
-  <%= label_tag( "They are dead.") %>
-  <%= radio_button_tag(:dead, false) %>
-  <%= label_tag("They are alive...for now.") %>
+  <%= f.label :dead, "They are dead." %>
+  <%= f.radio_button :dead, true %>
+  <%= f.label :dead, "They are alive...for now." %>
+  <%= f.radio_button :dead, false %>
   </p>
 
   <p>

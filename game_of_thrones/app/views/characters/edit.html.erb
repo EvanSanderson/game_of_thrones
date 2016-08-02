@@ -1,0 +1,23 @@
+<%= form_for ([@house, @character]) do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :weapon %>
+    <%= f.text_field :weapon %>
+  </p>
+
+  <p>
+  <%= f.label :dead, "They are dead." %>
+  <%= f.radio_button :dead, true %>
+  <%= f.label :dead, "They are alive...for now." %>
+  <%= f.radio_button :dead, false %>
+  </p>
+
+  <p>
+    <%= f.submit%>
+  </p>
+<% end %>

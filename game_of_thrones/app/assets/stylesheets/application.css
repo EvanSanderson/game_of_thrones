@@ -15,7 +15,7 @@
  */
 
 html {
-  background: url("http://wallpapercave.com/wp/MG7Zzam.jpg");
+  background: url("https://images2.alphacoders.com/662/662795.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -56,6 +56,7 @@ body {
   margin-top: 3em;
   margin: 0 auto;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .addCharacter {
@@ -65,7 +66,18 @@ body {
   text-align: center;
   border-radius: 10px;
   margin: 0 auto;
+  padding: 10px;
+  margin-top: 2em;
 }
+
 li {
   list-style-type: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: white;
 }
