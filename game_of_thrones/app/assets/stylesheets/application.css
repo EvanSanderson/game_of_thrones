@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  background: url("http://wallpapercave.com/wp/MG7Zzam.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.house {
+  display: inline-block;
+  background: #81A4CD;
+  width: 30%;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.banner {
+  width: 60%;
+}
+
+.links {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.houseShow {
+  display: block;
+  width: 80%;
+  background-color: #C0D7BB;
+  text-align: center;
+  margin-top: 3em;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.addCharacter {
+  display: block;
+  width: 60%;
+  background-color: #C0D7BB;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+li {
+  list-style-type: none;
+}

@@ -1,11 +1,14 @@
+<div class="header">
 <h1> Houses of Westeros </h1>
 <p> <%= link_to 'Add a New House', new_house_path %>
+</div>
 <% @houses.each do |house| %>
+<div class= "house">
   <h3> <%=house.name%> </h3>
   <p> <%=house.motto%></p>
-  <img src="<%=house.sigil_url%>">
-  <%= link_to 'View House Details', house_path(house) %>
-  <%= link_to 'Edit This House', edit_house_path(house) %>
-  <%= link_to 'Delete This House', house_path(house), method: :delete %>
-
+  <img class ="banner" src="<%=house.sigil_url%>">
+  <p class="links"> <%= link_to 'View House Details', house_path(house) %> </p>
+  <p class="links"> <%= link_to 'Edit This House', edit_house_path(house) %> </p>
+  <p class="links"> <%= link_to 'Delete This House', house_path(house), method: :delete %> </p>
+</div>
 <%end%>

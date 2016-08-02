@@ -1,7 +1,9 @@
-<h1> <%= @house.name %> </h1>
-<p> <%= @house.motto %> <p>
-<img src="<%= @house.sigil_url %>">
+<div class="houseShow">
+  <h1> <%= @house.name %> </h1>
+  <p> <%= @house.motto %> <p>
+  <img src="<%= @house.sigil_url %>">
 
+<h3> Current House Members </h3>
 <% @house.characters.each do |char| %>
   <ul>
     <li><%= char.name %>
@@ -16,7 +18,8 @@
         </ul>
       </ul>
     <%end%>
-
+  </div>
+<div class="addCharacter">
 <h2> Add A Character </h2>
 <%= form_for ([@house, @house.characters.build]) do |f| %>
 
@@ -41,5 +44,5 @@
     <%= f.submit%>
   </p>
 <% end %>
-
+ </div>
     <%= link_to 'Edit This House', edit_house_path(@house) %>
